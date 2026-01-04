@@ -1,6 +1,7 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+ @import "tailwindcss";
 
+
+ 
 /* Global fixes */
 html, body {
   width: 100%;
