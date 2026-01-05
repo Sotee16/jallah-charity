@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter,FaWhatsapp } from "react-icons/fa";
  
 export default function Footer() {
   return (
@@ -58,6 +58,20 @@ export default function Footer() {
             <li><a href="/gallery" className="hover:text-white">Gallery</a></li>
             <li><a href="#" className="hover:text-white">Partnerships</a></li>
           </ul>
+        </div>
+        <div>
+ <a
+  href="https://wa.me/231776103720"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 bg-green-500 text-white
+             flex items-center gap-2 px-5 py-3 rounded-full
+             shadow-lg hover:bg-green-600 z-50"
+>
+  <FaWhatsapp size={22} />
+  <span className="font-semibold">WhatsApp Us</span>
+</a>
+
         </div>
       </div>
 
