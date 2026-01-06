@@ -5,7 +5,9 @@ import App from './App.jsx'
 import "aos/dist/aos.css";
 import AOS from "aos";
 
-AOS.init({ duration: 900, once: true });
+AOS.init({ duration: 900,
+   once: true,
+   easing: "ease-in-out", });
 
 
 createRoot(document.getElementById('root')).render(

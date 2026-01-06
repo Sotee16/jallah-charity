@@ -20,7 +20,7 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6">
-            <a href="#" className="hover:text-white"><FaFacebookF /></a>
+            <a href="https://www.facebook.com/john.kamara.7121614?mibextid=wwXIfr&rdid=gA2XG0lhbc3lb7cN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3EZRjp9N%2F%3Fmibextid%3DwwXIfr" className="hover:text-white"><FaFacebookF /></a>
             <a href="#" className="hover:text-white"><FaInstagram /></a>
             <a href="#" className="hover:text-white"><FaLinkedinIn /></a>
             <a href="#" className="hover:text-white"><FaTwitter /></a>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
         <div>
  <a
-  href="https://wa.me/231776103720"
+  href="https://wa.me/231771269389"
   target="_blank"
   rel="noopener noreferrer"
   className="fixed bottom-6 right-6 bg-green-500 text-white

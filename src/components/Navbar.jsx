@@ -67,10 +67,11 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <NavLink to="/" className={navLinkClass}>Home</NavLink>
-            <NavLink to="#about" className={navLinkClass}>About</NavLink>
-            <NavLink to="#causes" className={navLinkClass}>Causes</NavLink>
-            <NavLink to="#gallery" className={navLinkClass}>Gallery</NavLink>
-            <NavLink to="#contact" className={navLinkClass}>Contact</NavLink>
+            <NavLink to="about" className={navLinkClass}>About</NavLink>
+             <NavLink to="gallery" className={navLinkClass}>Gallery</NavLink>
+            <NavLink to="contact" className={navLinkClass}>Contact</NavLink>
+            <NavLink to="/programs" className={navLinkClass}>Programs</NavLink>
+
             
 
             {/* Donate Button (Always Highlighted) */}

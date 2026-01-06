@@ -1,26 +1,100 @@
-import volunteer1 from "../assets/team/volunteer1.jpg";
-import Board from "../components/Board";
+export default function Volunteer() {
 
-export default function Volunteers() {
+function handleSubmit(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const name = form.name.value;
+  const email = form.email.value;
+  const phone = form.phone.value;
+  const message = form.message.value;
+
+  const whatsappNumber = "231776471123"; // Rescue Liberia number
+
+  const text = `
+Volunteer Application:
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Message: ${message}
+  `;
+
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+
+  form.reset();
+}
+
+
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <Board/>
+        <h1 className="text-4xl font-bold text-center mb-10">
+          Volunteer With <span className="text-[#B11226]">Rescue Liberia</span>
+        </h1>
 
-        <h2 className="text-4xl font-bold mb-8" data-aos="fade-up">
-          Our Volunteers
-        </h2>
+        <div className="grid md:grid-cols-2 gap-12 items-start">
 
-        <p className="mb-12 text-gray-600">
-          Passionate individuals donating time, skills, and love.
-        </p>
+          {/* Info */}
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">Why Volunteer?</h2>
+            <p className="text-gray-700 mb-4">
+              Volunteers are the heart of our mission. By joining Rescue Liberia,
+              you help bring positive change to communities across the country.
+            </p>
 
-        <div data-aos="zoom-in">
-          <img src={volunteer1} className="mx-auto w-40 h-40 rounded-full" />
-          <h4 className="mt-4 font-semibold">Community Volunteers</h4>
-        </div>
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>Community outreach</li>
+              <li>Education support</li>
+              <li>Healthcare assistance</li>
+              <li>Event coordination</li>
+            </ul>
+          </div>
 
+          {/* Form */}
+          <form
+  onSubmit={handleSubmit}
+  className="bg-gray-50 p-8 rounded-xl shadow space-y-5"
+>
+  <input
+    name="name"
+    placeholder="Full Name"
+    required
+    className="w-full border px-4 py-3 rounded-lg"
+  />
+
+  <input
+    name="email"
+    type="email"
+    placeholder="Email Address"
+    required
+    className="w-full border px-4 py-3 rounded-lg"
+  />
+
+  <input
+    name="phone"
+    type="tel"
+    placeholder="Phone Number"
+    required
+    className="w-full border px-4 py-3 rounded-lg"
+  />
+
+  <textarea
+    name="message"
+    rows="4"
+    placeholder="Why do you want to volunteer?"
+    className="w-full border px-4 py-3 rounded-lg"
+  ></textarea>
+
+  <button
+    type="submit"
+    className="w-full bg-[#25D366] text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition"
+  >
+    Send via WhatsApp
+  </button>
+</form>
+</div>
       </div>
     </section>
   );

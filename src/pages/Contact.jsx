@@ -40,7 +40,7 @@ ${message}
           </h5>
 
           <h2 className="text-4xl font-bold mb-6">
-            Get in Touch with <span className="text-[#B11226]">Rescue Liberia</span>
+            Get in Touch with <span className="text-[#B11226]">Rescue Liberia for better Life</span>
           </h2>
 
           <p className="text-gray-200 mb-6 leading-relaxed">
@@ -49,7 +49,7 @@ ${message}
           </p>
 
           <div className="space-y-4">
-            <p>📞 <strong>Phone:</strong> +231 776 471 123</p>
+            <p>📞 <strong>Phone:</strong> +231 776 103 720</p>
             <p>📧 <strong>Email:</strong> rescueliberia@gmail.com</p>
             <p>📍 <strong>Location:</strong> Monrovia, Liberia</p>
           </div>
