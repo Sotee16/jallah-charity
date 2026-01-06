@@ -9,7 +9,7 @@ function handleSubmit(e) {
   const phone = form.phone.value;
   const message = form.message.value;
 
-  const whatsappNumber = "231776471123"; // Rescue Liberia number
+  const whatsappNumber = "231771269389"; // Rescue Liberia number
 
   const text = `
 Volunteer Application:

@@ -33,10 +33,7 @@ function Counter({ value, triggerKey, delay = 0 }) {
   }, [value, motionValue, delay, triggerKey]);
 
   return (
-    <motion.span
-      style={{ scale }}
-      className="inline-flex items-baseline"
-    >
+    <motion.span style={{ scale }} className="inline-flex items-baseline">
       {count}
       {showPlus && (
         <motion.span
@@ -62,6 +59,7 @@ export default function Impact() {
         <h1 className="text-4xl font-bold mb-4">
           Our <span className="text-[#B11226]">Impact</span>
         </h1>
+
         <p className="text-gray-700 mb-12 text-lg md:text-xl max-w-3xl mx-auto">
           We are dedicated to transforming lives and communities. Every initiative we take, every program we run, and every volunteer that joins us helps build a brighter future. 
           Together, we bring hope, education, and support to those who need it most.
@@ -71,9 +69,9 @@ export default function Impact() {
           {stats.map((item, index) => (
             <motion.div
               key={index}
-              whileInView={() => setTrigger((prev) => prev + 1)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              onViewportEnter={() => setTrigger((prev) => prev + 1)}
               viewport={{ once: false, amount: 0.5 }}
               transition={{ delay: index * 0.2 }}
               className="bg-white p-6 rounded-xl shadow hover:scale-105 transition-transform duration-300"
@@ -87,7 +85,7 @@ export default function Impact() {
         </div>
 
         <p className="mt-12 text-gray-600 italic text-lg max-w-3xl mx-auto">
-          “Every action counts. Together, we can create a lasting impact.” 
+          “Every action counts. Together, we can create a lasting impact.”
         </p>
 
       </div>
